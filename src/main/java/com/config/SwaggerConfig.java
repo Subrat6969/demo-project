@@ -18,8 +18,8 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.any())
-				//.apis(RequestHandlerSelectors.basePackage("com.controller"))
+				//.apis(RequestHandlerSelectors.any())
+				.apis(RequestHandlerSelectors.basePackage("com.controller"))
 				.paths(PathSelectors.any()).build()
 				.apiInfo(apiEndPointsInfo());
 	}
